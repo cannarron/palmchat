@@ -1,0 +1,20 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-palmchatapp-dev-222109-authRole",
+      "UnauthRoleArn": "arn:aws:iam::656206083134:role/amplify-palmchatapp-dev-222109-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::656206083134:role/amplify-palmchatapp-dev-222109-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-palmchatapp-dev-222109-deployment",
+      "UnauthRoleName": "amplify-palmchatapp-dev-222109-unauthRole",
+      "StackName": "amplify-palmchatapp-dev-222109",
+      "StackId": "arn:aws:cloudformation:us-east-1:656206083134:stack/amplify-palmchatapp-dev-222109/df74f180-1b79-11ee-ae6c-0e0a3965bf6b",
+      "AmplifyAppId": "din24101k55np"
+    },
+    "categories": {
+      "auth": {
+        "palmchatappc916804e": {}
+      }
+    }
+  }
+}
