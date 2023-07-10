@@ -1,12 +1,15 @@
 import logo from './logo.svg';
 import './App.css';
 import React, { useEffect, useState } from 'react';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
 import { Amplify, Auth, Hub } from 'aws-amplify';
 import { CognitoHostedUIIdentityProvider } from '@aws-amplify/auth';
 import awsConfig from './aws-exports';
+import Homepage from './Homepage';
+
 Amplify.configure(awsConfig);
 
-function App() {
+const App = () => {
   
   const [user, setUser] = useState(null);
   const [customState, setCustomState] = useState(null);
@@ -34,14 +37,14 @@ function App() {
 
     return (
     <div className="App">
-      <button onClick={() => Auth.federatedSignIn()}>Open Hosted UI</button>
+        <Router>
+      <Route exact path="/" component={Homepage} />
+    </Router>
       <button onClick={() => Auth.federatedSignIn({provider: CognitoHostedUIIdentityProvider.Facebook })}>Open Facebook</button>
-      <button onClick={() => Auth.federatedSignIn({provider: CognitoHostedUIIdentityProvider.Google })}>Open Google</button>
-      <button onClick={() => Auth.federatedSignIn({provider: CognitoHostedUIIdentityProvider.Amazon })}>Open Amazon</button>
-      <button onClick={() => Auth.federatedSignIn({provider: CognitoHostedUIIdentityProvider.Apple })}>Open Apple</button>
       <button onClick={() => Auth.signOut()}>Sign Out</button>
       <div>{user && user.getUsername()}</div>
     </div>
+  
   );
   
 }
