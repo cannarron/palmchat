@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import { Amplify, Auth, Hub } from 'aws-amplify';
+import { useNavigate, Routes, Route } from 'react-router-dom';
 import { CognitoHostedUIIdentityProvider } from '@aws-amplify/auth';
 import awsConfig from './aws-exports';
+import Homepage from './Homepage.js'
 
 Amplify.configure(awsConfig);
 
@@ -30,10 +32,23 @@ function App() {
     return unsubscribe;
   }, []);
 
+ const navigate = useNavigate();
+  const handleSignIn = async () => {
+    try {
+      Auth.federatedSignIn({provider: CognitoHostedUIIdentityProvider.Facebook})
+    
+    } catch (error) {
+      console.log('Error signing in:', error);
+    }
+
+  }
     return (
     <div className="App">
-      <button onClick={() => Auth.federatedSignIn({provider: CognitoHostedUIIdentityProvider.Facebook })}>Open Facebook</button>
-      <button onClick={() => Auth.signOut()}>Sign Out</button>
+          <button onClick={(handleSignIn)}>Facebook Sign in</button>
+      <Routes>
+        <Route path='/home' element={<Homepage />} ></Route>
+      </Routes>
+  
       <div>{user && user.getUsername()}</div>
     </div>
   );

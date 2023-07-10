@@ -1,10 +1,10 @@
 {
   "version": "1",
   "cognitoConfig": {
-    "identityPoolName": "palmchatapp49bc072a_identitypool_49bc072a",
+    "identityPoolName": "palmchatappef7cd2ee_identitypool_ef7cd2ee",
     "allowUnauthenticatedIdentities": false,
-    "resourceNameTruncated": "palmch49bc072a",
-    "userPoolName": "palmchatapp49bc072a_userpool_49bc072a",
+    "resourceNameTruncated": "palmchef7cd2ee",
+    "userPoolName": "palmchatappef7cd2ee_userpool_ef7cd2ee",
     "autoVerifiedAttributes": [
       "email"
     ],
@@ -31,17 +31,17 @@
     "userpoolClientReadAttributes": [
       "email"
     ],
-    "userpoolClientLambdaRole": "palmch49bc072a_userpoolclient_lambda_role",
+    "userpoolClientLambdaRole": "palmchef7cd2ee_userpoolclient_lambda_role",
     "userpoolClientSetAttributes": false,
-    "sharedId": "49bc072a",
-    "resourceName": "palmchatapp49bc072a",
+    "sharedId": "ef7cd2ee",
+    "resourceName": "palmchatappef7cd2ee",
     "authSelections": "identityPoolAndUserPool",
     "useDefault": "defaultSocial",
     "hostedUI": true,
-    "hostedUIDomainName": "palmchatapp49bc072a-49bc072a",
+    "hostedUIDomainName": "palmchatappef7cd2ee-ef7cd2ee",
     "authProvidersUserPool": [],
     "hostedUIProviderMeta": "[]",
-    "oAuthMetadata": "{\"AllowedOAuthFlows\":[\"code\"],\"AllowedOAuthScopes\":[\"phone\",\"email\",\"openid\",\"profile\",\"aws.cognito.signin.user.admin\"],\"CallbackURLs\":[\"http://localhost:3000/\"],\"LogoutURLs\":[\"http://localhost:3000/\"]}",
+    "oAuthMetadata": "{\"AllowedOAuthFlows\":[\"code\"],\"AllowedOAuthScopes\":[\"phone\",\"email\",\"openid\",\"profile\",\"aws.cognito.signin.user.admin\"],\"CallbackURLs\":[\"http://localhost:3000/home/\"],\"LogoutURLs\":[\"http://localhost:3000/\"]}",
     "userPoolGroupList": [],
     "serviceName": "Cognito",
     "usernameCaseSensitive": false,
