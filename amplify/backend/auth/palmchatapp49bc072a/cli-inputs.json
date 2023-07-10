@@ -1,10 +1,10 @@
 {
   "version": "1",
   "cognitoConfig": {
-    "identityPoolName": "palmchatappc916804e_identitypool_c916804e",
+    "identityPoolName": "palmchatapp49bc072a_identitypool_49bc072a",
     "allowUnauthenticatedIdentities": false,
-    "resourceNameTruncated": "palmchc916804e",
-    "userPoolName": "palmchatappc916804e_userpool_c916804e",
+    "resourceNameTruncated": "palmch49bc072a",
+    "userPoolName": "palmchatapp49bc072a_userpool_49bc072a",
     "autoVerifiedAttributes": [
       "email"
     ],
@@ -31,34 +31,20 @@
     "userpoolClientReadAttributes": [
       "email"
     ],
-    "userpoolClientLambdaRole": "palmchc916804e_userpoolclient_lambda_role",
+    "userpoolClientLambdaRole": "palmch49bc072a_userpoolclient_lambda_role",
     "userpoolClientSetAttributes": false,
-    "sharedId": "c916804e",
-    "resourceName": "palmchatappc916804e",
+    "sharedId": "49bc072a",
+    "resourceName": "palmchatapp49bc072a",
     "authSelections": "identityPoolAndUserPool",
     "useDefault": "defaultSocial",
     "hostedUI": true,
-    "hostedUIDomainName": "palmchatappc916804e-c916804e",
+    "hostedUIDomainName": "palmchatapp49bc072a-49bc072a",
     "authProvidersUserPool": [],
     "hostedUIProviderMeta": "[]",
+    "oAuthMetadata": "{\"AllowedOAuthFlows\":[\"code\"],\"AllowedOAuthScopes\":[\"phone\",\"email\",\"openid\",\"profile\",\"aws.cognito.signin.user.admin\"],\"CallbackURLs\":[\"http://localhost:3000/\"],\"LogoutURLs\":[\"http://localhost:3000/\"]}",
     "userPoolGroupList": [],
     "serviceName": "Cognito",
     "usernameCaseSensitive": false,
-    "useEnabledMfas": true,
-    "authRoleArn": {
-      "Fn::GetAtt": [
-        "AuthRole",
-        "Arn"
-      ]
-    },
-    "unauthRoleArn": {
-      "Fn::GetAtt": [
-        "UnauthRole",
-        "Arn"
-      ]
-    },
-    "breakCircularDependency": true,
-    "dependsOn": [],
-    "oAuthMetadata": "{\"AllowedOAuthFlows\":[\"code\"],\"AllowedOAuthScopes\":[\"phone\",\"email\",\"openid\",\"profile\",\"aws.cognito.signin.user.admin\"],\"CallbackURLs\":[\"https://localhost:3000/home/\",\"http://localhost:3000/home/\"],\"LogoutURLs\":[\"http://localhost:3000/\",\"http://localhost:3000/\"]}"
+    "useEnabledMfas": true
   }
 }

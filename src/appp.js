@@ -1,11 +1,16 @@
+import logo from './logo.svg';
+import './App.css';
 import React, { useEffect, useState } from 'react';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
 import { Amplify, Auth, Hub } from 'aws-amplify';
 import { CognitoHostedUIIdentityProvider } from '@aws-amplify/auth';
 import awsConfig from './aws-exports';
+import Homepage from './Homepage';
 
 Amplify.configure(awsConfig);
 
-function App() {
+const App = () => {
+  
   const [user, setUser] = useState(null);
   const [customState, setCustomState] = useState(null);
 
@@ -36,6 +41,9 @@ function App() {
       <button onClick={() => Auth.signOut()}>Sign Out</button>
       <div>{user && user.getUsername()}</div>
     </div>
+  
   );
+  
 }
+
 export default App;
