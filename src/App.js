@@ -3,7 +3,7 @@ import { Amplify, Auth, Hub } from 'aws-amplify';
 import {Routes, Route } from 'react-router-dom';
 import { CognitoHostedUIIdentityProvider } from '@aws-amplify/auth';
 import awsConfig from './aws-exports';
-import Homepage from './Homepage.js'
+import Homepage from './Homepage'
 
 Amplify.configure(awsConfig);
 
