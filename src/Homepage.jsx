@@ -4,7 +4,6 @@ import { Auth, API, graphqlOperation} from 'aws-amplify';
 import { createRoom, createMessage } from './graphql/mutations';
 import RoomList from './RoomList';
 
-
 const Homepage = () => {
   const signOut = async () => {
     try {
