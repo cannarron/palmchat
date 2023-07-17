@@ -14,6 +14,9 @@
     "categories": {
       "auth": {
         "palmchatappef7cd2ee": {}
+      },
+      "api": {
+        "palmchatapp": {}
       }
     }
   }

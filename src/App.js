@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Amplify, Auth, Hub } from 'aws-amplify';
-import { useNavigate, Routes, Route } from 'react-router-dom';
+import {Routes, Route } from 'react-router-dom';
 import { CognitoHostedUIIdentityProvider } from '@aws-amplify/auth';
 import awsConfig from './aws-exports';
 import Homepage from './Homepage.js'
@@ -32,7 +32,6 @@ function App() {
     return unsubscribe;
   }, []);
 
- const navigate = useNavigate();
   const handleSignIn = async () => {
     try {
       Auth.federatedSignIn({provider: CognitoHostedUIIdentityProvider.Facebook})
