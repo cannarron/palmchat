@@ -27,7 +27,7 @@ function App() {
 
     Auth.currentAuthenticatedUser()
       .then(currentUser => setUser(currentUser))
-      .catch(() => console.log("There was a problem sigining you in, please retry."));
+      .catch(() => console.log("There was a problem sigining you in, please try again."));
 
     return unsubscribe;
   }, []);
